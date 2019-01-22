@@ -1,0 +1,22 @@
+# Reference #
+https://cleverbuilder.com/articles/camel-tutorial/
+
+# What and Why: Apache Camel #
+  > It’s a set of Java APIs that help you integrate and process data between different computer systems. 
+  > Almost any time you need to move data from A to B, you can probably use Camel.
+  
+## Thinking in Camel ##
+ > A route is a pipe that moves data from one place to another. It moves data between things called endpoints.
+ > To allow Camel to connect to an endpoint, it comes with a library of components. You can also think of it like an adaptor.
+ 
+ > Example:- COMPONENT 		PURPOSE							 ENDPOINT URI
+ 			 File 	 		for reading and writing files 	 file:
+ 			 
+ > Between each endpoint, the data can also be transformed or modified, either by passing the data through another 
+   endpoint, or by using an EIP.
+   
+   EIP name 	What it does 							Java syntax
+   From* 	    Receives a message from an endpoint 	.from()
+   To* 			Sends a message to an endpoint 			.to()
+   
+> Finally, to run and manage your routes, Camel has a container called the Camel Context.

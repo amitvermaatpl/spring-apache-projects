@@ -5,18 +5,36 @@ https://cleverbuilder.com/articles/camel-tutorial/
   > It’s a set of Java APIs that help you integrate and process data between different computer systems. 
   > Almost any time you need to move data from A to B, you can probably use Camel.
   
+  > In an enterprise, a number of systems of different types exist. Some of these may be legacy systems while some may
+    be new. These systems often interact with each other,and need to be integrated. This interaction or integration is
+    not easy as the implementations of the systems, their message formats may differ. One way to achieve this is to
+    implement code which bridges these differences. However this will be point to point integration. If tomorrow again 
+    if there is change in a system the other might also have to be changed which is not good. Instead of this point to 
+    point integration which causes tight coupling we can implement an additional layer to mediate the differences between
+    the systems. This results in loose coupling and not affect much our existing systems. 
+  
 ## Thinking in Camel ##
- > A route is a pipe that moves data from one place to another. It moves data between things called endpoints.
- > To allow Camel to connect to an endpoint, it comes with a library of components. You can also think of it like an adaptor.
+  > A route is a pipe that moves data from one place to another. It moves data between things called endpoints.
+  > To allow Camel to connect to an endpoint, it comes with a library of components. You can also think of it like an 
+    adaptor.
  
- > Example:- COMPONENT 		PURPOSE							 ENDPOINT URI
- 			 File 	 		for reading and writing files 	 file:
+  > Example:- COMPONENT 		PURPOSE							 ENDPOINT URI
+ 			  File 	 		    for reading and writing files 	 file:
  			 
- > Between each endpoint, the data can also be transformed or modified, either by passing the data through another 
-   endpoint, or by using an EIP.
+  > Between each endpoint, the data can also be transformed or modified, either by passing the data through another 
+    endpoint, or by using an EIP.
    
-   EIP name 	What it does 							Java syntax
-   From* 	    Receives a message from an endpoint 	.from()
-   To* 			Sends a message to an endpoint 			.to()
+    EIP name 	 What it does 							Java syntax
+    From* 	     Receives a message from an endpoint 	.from()
+    To* 		 Sends a message to an endpoint 		.to()
    
 > Finally, to run and manage your routes, Camel has a container called the Camel Context.
+
+> We can put the 'camel-context' in Service-Mix also.
+
+
+### References ###
+
+https://blog.codecentric.de/en/2018/08/easy-integration-between-services-with-apache-camel/
+
+http://henryk-konsek.blogspot.com/2014/10/using-apache-camel-with-spring-boot.html

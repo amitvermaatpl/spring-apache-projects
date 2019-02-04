@@ -16,5 +16,11 @@ public class FileRoute extends RouteBuilder{
 		from("file:C://inputFolder?noop=true").to("file:C://outputFolder");
 		
 	}
-
+	/* * 
+	 * In Spring Boot: there is no need to create a Camel-Context object and add router to context, like-
+	 * CamelContext context = new DefaultCamelContext()
+	 * context.addRoutes(new FileRoute());
+	 * context.start();
+	 * * 
+	 */
 }
